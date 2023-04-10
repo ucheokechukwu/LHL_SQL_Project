@@ -1,0 +1,58 @@
+"country","city","avg"
+"United States","Chicago",5
+"United States","Pittsburgh",4
+"United States","New York",3.82
+"United States","Houston",2.5
+"Canada","not available in demo dataset",2.5
+"Canada","Toronto",2.3333333333333335
+"United States","Sunnyvale",2.25609756097561
+"United States","not available in demo dataset",2.0441176470588234
+"United States","Mountain View",1.5576923076923077
+"India","Hyderabad",1.5
+"Bulgaria","not available in demo dataset",1.5
+"Mexico","not available in demo dataset",1.5
+"United States","Seattle",1.4444444444444444
+"Japan","not available in demo dataset",1.4
+"United States","San Francisco",1.3636363636363635
+"Ireland","Dublin",1
+"Israel","Tel Aviv-Yafo",1
+"Maldives","not available in demo dataset",1
+"Netherlands","not available in demo dataset",1
+"Romania","not available in demo dataset",1
+"Singapore","Singapore",1
+"South Korea","not available in demo dataset",1
+"Sweden","not available in demo dataset",1
+"Switzerland","Zurich",1
+"Switzerland","not available in demo dataset",1
+"Taiwan","(not set)",1
+"Taiwan","not available in demo dataset",1
+"Thailand","Bangkok",1
+"Thailand","not available in demo dataset",1
+"United Kingdom","London",1
+"United States","(not set)",1
+"United States","Ann Arbor",1
+"United States","Atlanta",1
+"United States","Austin",1
+"United States","Dallas",1
+"United States","Detroit",1
+"United States","Kirkland",1
+"United States","Palo Alto",1
+"United States","San Bruno",1
+"United States","San Jose",1
+"United States","Washington",1
+"Australia","not available in demo dataset",1
+"Vietnam","not available in demo dataset",1
+"Austria","not available in demo dataset",1
+"Belgium","not available in demo dataset",1
+"Chile","Santiago",1
+"Colombia","Bogota",1
+"Denmark","not available in demo dataset",1
+"Egypt","not available in demo dataset",1
+"France","Paris",1
+"France","not available in demo dataset",1
+"Germany","Berlin",1
+"Germany","Munich",1
+"Hong Kong","(not set)",1
+"Hong Kong","Hong Kong",1
+"India","not available in demo dataset",1
+"Indonesia","not available in demo dataset",1
