@@ -1,0 +1,264 @@
+"country","city","percent_of_revenue"
+"United States","not available in demo dataset",24.75
+"United States","New York",23.50
+"United States","Sunnyvale",13.83
+"United States","Mountain View",10.49
+"United States","Seattle",7.38
+"United States","San Francisco",6.47
+"United States","Chicago",6.31
+"United States","San Jose",3.15
+"United States","Palo Alto",3.11
+"Israel","Tel Aviv-Yafo",0.66
+"Switzerland","Zurich",0.35
+"Austria","Vienna",0.00
+"Austria","not available in demo dataset",0.00
+"Bahamas","not available in demo dataset",0.00
+"Bahrain","not available in demo dataset",0.00
+"Bangladesh","(not set)",0.00
+"Bangladesh","not available in demo dataset",0.00
+"Belarus","not available in demo dataset",0.00
+"Belgium","not available in demo dataset",0.00
+"Bosnia & Herzegovina","(not set)",0.00
+"Bosnia & Herzegovina","not available in demo dataset",0.00
+"Brazil","Fortaleza",0.00
+"Brazil","Rio de Janeiro",0.00
+"Brazil","Sao Paulo",0.00
+"Brazil","not available in demo dataset",0.00
+"Brunei","not available in demo dataset",0.00
+"Bulgaria","not available in demo dataset",0.00
+"Cambodia","not available in demo dataset",0.00
+"Canada","(not set)",0.00
+"Canada","Calgary",0.00
+"Canada","Edmonton",0.00
+"Canada","Kitchener",0.00
+"Canada","Montreal",0.00
+"Canada","Toronto",0.00
+"Canada","Vancouver",0.00
+"Canada","not available in demo dataset",0.00
+"Chile","Santiago",0.00
+"Chile","not available in demo dataset",0.00
+"China","Beijing",0.00
+"China","not available in demo dataset",0.00
+"Colombia","Bogota",0.00
+"Colombia","not available in demo dataset",0.00
+"Costa Rica","not available in demo dataset",0.00
+"Croatia","not available in demo dataset",0.00
+"Cyprus","not available in demo dataset",0.00
+"Czechia","Prague",0.00
+"Czechia","not available in demo dataset",0.00
+"Côte d’Ivoire","(not set)",0.00
+"Côte d’Ivoire","not available in demo dataset",0.00
+"Denmark","not available in demo dataset",0.00
+"Dominican Republic","not available in demo dataset",0.00
+"Ecuador","not available in demo dataset",0.00
+"Egypt","not available in demo dataset",0.00
+"Estonia","not available in demo dataset",0.00
+"Ethiopia","not available in demo dataset",0.00
+"Finland","Helsinki",0.00
+"Finland","not available in demo dataset",0.00
+"France","Courbevoie",0.00
+"France","Paris",0.00
+"France","Quimper",0.00
+"France","Singapore",0.00
+"France","not available in demo dataset",0.00
+"French Polynesia","not available in demo dataset",0.00
+"Georgia","not available in demo dataset",0.00
+"Germany","Berlin",0.00
+"Germany","Hamburg",0.00
+"Germany","Munich",0.00
+"Germany","not available in demo dataset",0.00
+"Ghana","not available in demo dataset",0.00
+"Greece","(not set)",0.00
+"Greece","Athens",0.00
+"Greece","Thessaloniki",0.00
+"Greece","not available in demo dataset",0.00
+"Guatemala","not available in demo dataset",0.00
+"Honduras","not available in demo dataset",0.00
+"Hong Kong","(not set)",0.00
+"Hong Kong","Hong Kong",0.00
+"Hong Kong","not available in demo dataset",0.00
+"Hungary","Istanbul",0.00
+"Hungary","not available in demo dataset",0.00
+"India","(not set)",0.00
+"India","Ahmedabad",0.00
+"India","Bengaluru",0.00
+"India","Chennai",0.00
+"India","Gurgaon",0.00
+"India","Hyderabad",0.00
+"India","Jaipur",0.00
+"India","Kolkata",0.00
+"India","Lucknow",0.00
+"India","Mumbai",0.00
+"India","New Delhi",0.00
+"India","Patna",0.00
+"India","Pune",0.00
+"India","not available in demo dataset",0.00
+"Indonesia","Jakarta",0.00
+"Indonesia","not available in demo dataset",0.00
+"Iraq","not available in demo dataset",0.00
+"Ireland","Dublin",0.00
+"Ireland","not available in demo dataset",0.00
+"Israel","not available in demo dataset",0.00
+"Italy","Milan",0.00
+"Italy","Rome",0.00
+"Italy","not available in demo dataset",0.00
+"Japan","Chiyoda",0.00
+"Japan","Chuo",0.00
+"Japan","Minato",0.00
+"Japan","Mountain View",0.00
+"Japan","Osaka",0.00
+"Japan","Sakai",0.00
+"Japan","Shibuya",0.00
+"Japan","Shinjuku",0.00
+"Japan","Yokohama",0.00
+"Japan","not available in demo dataset",0.00
+"Kazakhstan","not available in demo dataset",0.00
+"Kuwait","not available in demo dataset",0.00
+"Laos","not available in demo dataset",0.00
+"Latvia","(not set)",0.00
+"Latvia","not available in demo dataset",0.00
+"Lithuania","not available in demo dataset",0.00
+"Luxembourg","not available in demo dataset",0.00
+"Macau","not available in demo dataset",0.00
+"Malaysia","Ipoh",0.00
+"Malaysia","Kuala Lumpur",0.00
+"Malaysia","not available in demo dataset",0.00
+"Maldives","not available in demo dataset",0.00
+"Mali","not available in demo dataset",0.00
+"Mauritius","not available in demo dataset",0.00
+"Mexico","Mexico City",0.00
+"Mexico","not available in demo dataset",0.00
+"Morocco","not available in demo dataset",0.00
+"Myanmar (Burma)","not available in demo dataset",0.00
+"Nepal","not available in demo dataset",0.00
+"Netherlands","Amsterdam",0.00
+"Netherlands","not available in demo dataset",0.00
+"New Zealand","not available in demo dataset",0.00
+"Norway","not available in demo dataset",0.00
+"Oman","not available in demo dataset",0.00
+"Pakistan","not available in demo dataset",0.00
+"Panama","not available in demo dataset",0.00
+"Peru","(not set)",0.00
+"Peru","La Victoria",0.00
+"Peru","not available in demo dataset",0.00
+"Philippines","Taguig",0.00
+"Philippines","not available in demo dataset",0.00
+"Poland","Warsaw",0.00
+"Poland","not available in demo dataset",0.00
+"Portugal","not available in demo dataset",0.00
+"Puerto Rico","not available in demo dataset",0.00
+"Qatar","not available in demo dataset",0.00
+"Romania","Bucharest",0.00
+"Romania","Iasi",0.00
+"Romania","not available in demo dataset",0.00
+"Russia","not available in demo dataset",0.00
+"Réunion","(not set)",0.00
+"Saudi Arabia","not available in demo dataset",0.00
+"Serbia","(not set)",0.00
+"Serbia","not available in demo dataset",0.00
+"Singapore","(not set)",0.00
+"Singapore","Singapore",0.00
+"Singapore","not available in demo dataset",0.00
+"Slovakia","Bratislava",0.00
+"Slovakia","not available in demo dataset",0.00
+"Slovenia","not available in demo dataset",0.00
+"South Africa","Westville",0.00
+"South Africa","not available in demo dataset",0.00
+"South Korea","Seoul",0.00
+"South Korea","not available in demo dataset",0.00
+"Spain","Barcelona",0.00
+"Spain","Madrid",0.00
+"Spain","not available in demo dataset",0.00
+"Sri Lanka","Colombo",0.00
+"Sri Lanka","not available in demo dataset",0.00
+"Sudan","not available in demo dataset",0.00
+"Sweden","Stockholm",0.00
+"Sweden","not available in demo dataset",0.00
+"Switzerland","not available in demo dataset",0.00
+"Taiwan","(not set)",0.00
+"Taiwan","Zhongli District",0.00
+"Taiwan","not available in demo dataset",0.00
+"Tanzania","not available in demo dataset",0.00
+"Thailand","Bangkok",0.00
+"Thailand","not available in demo dataset",0.00
+"Trinidad & Tobago","(not set)",0.00
+"Tunisia","not available in demo dataset",0.00
+"Turkey","Antalya",0.00
+"Turkey","Istanbul",0.00
+"Turkey","not available in demo dataset",0.00
+"Uganda","not available in demo dataset",0.00
+"Ukraine","Kiev",0.00
+"Ukraine","not available in demo dataset",0.00
+"United Arab Emirates","Dubai",0.00
+"United Arab Emirates","not available in demo dataset",0.00
+"United Kingdom","(not set)",0.00
+"United Kingdom","London",0.00
+"United Kingdom","Manchester",0.00
+"United Kingdom","Oxford",0.00
+"United Kingdom","Wrexham",0.00
+"United Kingdom","not available in demo dataset",0.00
+"United States","(not set)",0.00
+"United States","Ann Arbor",0.00
+"United States","Atlanta",0.00
+"United States","Austin",0.00
+"United States","Bellflower",0.00
+"United States","Boston",0.00
+"United States","Cambridge",0.00
+"United States","Charlotte",0.00
+"United States","Cupertino",0.00
+"United States","Dallas",0.00
+"United States","Denver",0.00
+"United States","Detroit",0.00
+"United States","East Lansing",0.00
+"United States","Fremont",0.00
+"United States","Hayward",0.00
+"United States","Hong Kong",0.00
+"United States","Houston",0.00
+"United States","Irvine",0.00
+"United States","Jacksonville",0.00
+"United States","Jersey City",0.00
+"United States","Kirkland",0.00
+"United States","Los Angeles",0.00
+"United States","Marlboro",0.00
+"United States","Menlo Park",0.00
+"United States","Mexico City",0.00
+"United States","Milpitas",0.00
+"United States","Oakland",0.00
+"United States","Orlando",0.00
+"United States","Oviedo",0.00
+"United States","Philadelphia",0.00
+"United States","Phoenix",0.00
+"United States","Pittsburgh",0.00
+"United States","Portland",0.00
+"United States","Redmond",0.00
+"United States","Redwood City",0.00
+"United States","Rexburg",0.00
+"United States","Sacramento",0.00
+"United States","San Antonio",0.00
+"United States","San Bruno",0.00
+"United States","San Diego",0.00
+"United States","San Mateo",0.00
+"United States","Santa Clara",0.00
+"United States","Santa Monica",0.00
+"United States","South San Francisco",0.00
+"United States","St. Louis",0.00
+"United States","Stanford",0.00
+"United States","Tempe",0.00
+"United States","Vancouver",0.00
+"United States","Washington",0.00
+"Uruguay","Montevideo",0.00
+"Uruguay","not available in demo dataset",0.00
+"Venezuela","not available in demo dataset",0.00
+"Vietnam","Ho Chi Minh City",0.00
+"Albania","not available in demo dataset",0.00
+"Vietnam","not available in demo dataset",0.00
+"Argentina","Buenos Aires",0.00
+"Argentina","Rosario",0.00
+"Argentina","Santa Fe",0.00
+"Argentina","not available in demo dataset",0.00
+"Australia","Adelaide",0.00
+"Australia","Brisbane",0.00
+"Australia","Melbourne",0.00
+"Australia","Perth",0.00
+"Australia","Sydney",0.00
+"Australia","not available in demo dataset",0.00

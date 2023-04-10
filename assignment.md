@@ -7,6 +7,11 @@ Create a new PostgreSQL database called `ecommerce`. Set up tables for each .csv
 > #### Note
 > We have gone over the ways that you can import a .csv file into the PostgreSQL database but [this resource](https://www.youtube.com/watch?v=6Jf7eTkIaR4) summarizes it, in case you need a refresher.
 
+##### My Notes
+- Some numeric columns were imported as varchar datatype because of their size. I got 'out of range' errors when I tried to import them as integer, and bigint datatypes respectively.
+- Before importing, I opened each csv in Excel and used the Data -> Filter functionality to overview the data in each column. I ran LEN(text) for certain columns. This gave me an idea of the appropriate data type and size for string/character types to import the columns.
+- imported table names with "" to preserve the formatting
+
 
 ## Part 2: Data Cleaning
 
