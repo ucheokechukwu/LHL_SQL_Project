@@ -36,7 +36,7 @@ group by country, city
 order by avg(units_sold) desc
 
 Answer:
-
+United States/Chicago - 5 and United States/Pittburg - 4
 
 
 
@@ -45,7 +45,13 @@ Answer:
 
 
 SQL Queries:
-
+select country, city, max(products.category)
+from all_sessions
+	inner join products
+	on all_sessions."productSKU" = products."productSKU"
+where products.category !='unset'
+group by country, city
+order by country, city
 
 
 Answer:
@@ -59,6 +65,16 @@ Answer:
 
 SQL Queries:
 
+with max_selling_products_by_country as
+	(select country, city, max("productSKU") 
+	from all_sessions
+	group by country, city)
+-- joining with modified products table to get the productName
+select * 
+from max_selling_products_by_country
+	inner join products
+	on max_selling_products_by_country.max = products."productSKU"
+order by country, city;
 
 
 Answer:
@@ -71,11 +87,28 @@ Answer:
 
 SQL Queries:
 
+select sum(revenue)
+from analytics
+	inner join visitorLocation
+	on analytics."visitId" = visitorLocation."visitId";
+-- Query for Total sum
+
+select country, city, (sum(revenue)*100 / 
+					   	(select sum(revenue)
+						from analytics
+							inner join visitorLocation
+							on analytics."visitId" = visitorLocation."visitId"))::numeric(100,2) as percent_of_revenue
+from analytics
+	inner join visitorLocation
+	on analytics."visitId" = visitorLocation."visitId"
+
+group by country, city
+order by sum(revenue) desc
 
 
 Answer:
 
-
+United States/ unknown city at 24.75% and United States/New York at 23.5%
 
 
 
