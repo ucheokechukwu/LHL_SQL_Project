@@ -6,10 +6,19 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 SQL Queries:
 
+select country, city, sum(revenue)
+from analytics
+	inner join visitorLocation
+	on analytics."visitId" = visitorLocation."visitId"
+
+group by country, city
+order by sum(revenue) desc
+
 
 
 Answer:
-
+-- The country is USA
+-- The city is Sunnyvale, USA.
 
 
 
@@ -18,7 +27,13 @@ Answer:
 
 SQL Queries:
 
-
+select country, city, avg(units_sold)::float
+from analytics
+	inner join visitorLocation
+	on analytics."visitId" = visitorLocation."visitId"
+where units_sold !=0
+group by country, city
+order by avg(units_sold) desc
 
 Answer:
 
