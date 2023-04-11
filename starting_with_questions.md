@@ -1,116 +1,177 @@
-Answer the following questions and provide the SQL queries used to find the answer.
+-- Answer the following questions and provide the SQL queries used to find the answer.
 
     
-**Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
+-- **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
+-- SQL Queries:
 
-SQL Queries:
+SELECT country, city, SUM(revenue)
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId"
 
-select country, city, sum(revenue)
-from analytics
-	inner join visitorLocation
-	on analytics."visitId" = visitorLocation."visitId"
+GROUP BY country, city
+ORDER BY sum(revenue) DESC;
 
-group by country, city
-order by sum(revenue) desc
+SELECT country, SUM(revenue)
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId"
+
+GROUP BY country
+ORDER BY sum(revenue) DESC;
+
 
 
 
 Answer:
--- The country is USA
--- The city is Sunnyvale, USA.
+-- The country is USA 32.4K
+-- The city is New York, USA. 11.3K
 
 
+-- **Question 2: What is the average number of products ordered FROM visitors in each city and country?**
 
-**Question 2: What is the average number of products ordered from visitors in each city and country?**
+-- SQL Queries:
 
+SELECT country, city, AVG(units_sold)::float
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId"
+WHERE units_sold !=0
+GROUP BY  country, city
+ORDER BY AVG(units_sold) DESC;
 
-SQL Queries:
+SELECT country, AVG(units_sold)::float
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId"
+WHERE units_sold !=0
+GROUP BY  country
+ORDER BY AVG(units_sold) DESC;
 
-select country, city, avg(units_sold)::float
-from analytics
-	inner join visitorLocation
-	on analytics."visitId" = visitorLocation."visitId"
-where units_sold !=0
-group by country, city
-order by avg(units_sold) desc
-
-Answer:
-United States/Chicago - 5 and United States/Pittburg - 4
-
-
-
-
-**Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
-
-
-SQL Queries:
-select country, city, max(products.category)
-from all_sessions
-	inner join products
-	on all_sessions."productSKU" = products."productSKU"
-where products.category !='unset'
-group by country, city
-order by country, city
-
-
-Answer:
+-- Answer:
+-- City - Chicago, United States has 5 the highest average
+-- Country - Canada has 2.33
 
 
 
 
+-- **Question 3: Is there any pattern in the types (product categories) 
+--of products ordered from visitors in each city and country?**
 
-**Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+-- SQL Queries:
+SELECT country, city, MAX ("productCategory")
+FROM all_sessions
+    INNER JOIN products
+    ON all_sessions."productSKU" = products."productSKU"
+WHERE "productCategory" !='Uncategorized'
+GROUP BY  country, city
+ORDER BY MAX ("productCategory");
+
+-- SQL Queries:
+SELECT country, MAX ("productCategory")
+FROM all_sessions
+    INNER JOIN products
+    ON all_sessions."productSKU" = products."productSKU"
+WHERE "productCategory" !='Uncategorized'
+GROUP BY  country
+ORDER BY MAX ("productCategory");
+
+--Filtering with brand names
+SELECT country, MAX ("productCategory")
+FROM all_sessions
+    INNER JOIN products
+    ON all_sessions."productSKU" = products."productSKU"
+WHERE "productCategory" !='Uncategorized' and "productCategory" LIKE '%Brand%'
+GROUP BY  country
+ORDER BY MAX ("productCategory");
 
 
-SQL Queries:
+-- Answer:
+-- Accesories, Android Brand, and Apparels are the top 10 most popular results
+-- Filtering with brand categories, it looks like Google is the most popular brand
 
-with max_selling_products_by_country as
-	(select country, city, max("productSKU") 
-	from all_sessions
-	group by country, city)
+
+-- **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+
+-- SQL Queries:
+
+with max_selling_products_by_country AS
+    (SELECT country, city, MAX("productSKU") 
+    FROM all_sessions
+    GROUP BY  country, city)
 -- joining with modified products table to get the productName
-select * 
-from max_selling_products_by_country
-	inner join products
-	on max_selling_products_by_country.max = products."productSKU"
-order by country, city;
+SELECT country, city, products."productName"
+FROM max_selling_products_by_country
+    INNER JOIN products
+    ON max_selling_products_by_country.max = products."productSKU"
+ORDER BY country, city;
+
+-
+
+with max_selling_products_by_country AS
+    (SELECT country, MAX("productSKU") 
+    FROM all_sessions
+    GROUP BY  country)
+-- joining with modified products table to get the productName
+SELECT country, products."productName"
+FROM max_selling_products_by_country
+    INNER JOIN products
+    ON max_selling_products_by_country.max = products."productSKU"
+ORDER BY country;
+
+-- Answer: Out of the top 10 results, 6 items were stationary/office. 
+-- Out of the top 20 results, 14 items were stationary/office. 
 
 
-Answer:
+-- **Question 5: Can we summarize the impact of revenue generated FROM each city/country?**
 
-
-
-
-
-**Question 5: Can we summarize the impact of revenue generated from each city/country?**
-
-SQL Queries:
-
-select sum(revenue)
-from analytics
-	inner join visitorLocation
-	on analytics."visitId" = visitorLocation."visitId";
+-- SQL Queries:
+--per city
+SELECT SUM(revenue)
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId";
 -- Query for Total sum
 
-select country, city, (sum(revenue)*100 / 
-					   	(select sum(revenue)
-						from analytics
-							inner join visitorLocation
-							on analytics."visitId" = visitorLocation."visitId"))::numeric(100,2) as percent_of_revenue
-from analytics
-	inner join visitorLocation
-	on analytics."visitId" = visitorLocation."visitId"
+SELECT country, city, (sum(revenue)*100 / 
+                        (SELECT sum(revenue)
+                        FROM analytics
+                            INNER JOIN visitorLocation
+                            ON analytics."visitId" = visitorLocation."visitId"))::numeric(100,2) as percent_of_revenue
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId"
 
-group by country, city
-order by sum(revenue) desc
-
-
-Answer:
-
-United States/ unknown city at 24.75% and United States/New York at 23.5%
+GROUP BY country, city
+ORDER BY sum(revenue) DESC;
+ 
+-- See spreadsheet but New York (33%) and SunnyVale(20%) and Mountain View (14%)
+-- are all US cities with the highest results
 
 
+--per country
+SELECT SUM(revenue)
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId";
+-- Query for Total sum
 
+SELECT country, (sum(revenue)*100 / 
+                        (SELECT sum(revenue)
+                        FROM analytics
+                            INNER JOIN visitorLocation
+                            ON analytics."visitId" = visitorLocation."visitId"))::numeric(100,2) as percent_of_revenue
+FROM analytics
+    INNER JOIN visitorLocation
+    ON analytics."visitId" = visitorLocation."visitId"
+
+GROUP BY country
+ORDER BY sum(revenue) DESC;
+
+-- Answer:
+
+-- United States has the highest result at 96.26%
+-- it is possible that the scores are also due to the avialble data. 
 
 
