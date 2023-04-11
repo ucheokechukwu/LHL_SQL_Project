@@ -7,20 +7,20 @@ The data varies from 1K to 1M (analytics).
 
 
 ## Process
-### (Creating the Database) 
-Creating the ecommerce database using the provided instructions.
-Creating tables for each csv file.
-Loading the csv file into each table. 
-Challenge/learning experience: I realized that some of the columns had integer values that were too long to be stored as numbers. I had to store them as varchar/text
-### (Analyzing the data)
+### Creating the Database 
+- Creating the ecommerce database using the provided instructions.
+- Creating tables for each csv file.
+- Loading the csv file into each table. 
+- Challenge/learning experience: I realized that some of the columns had integer values that were too long to be stored as numbers. I had to store them as varchar/text.
+### Analyzing the data
 I used Excel's Data Filters to analyze the data in each table. I tried to understand what the columns meant and the information they gave. I discovered patterns like the relationship between Visitorstarttime and visitId, between ratio (in sales_report and the units sold/inventory), the totalTransactionRevenue in all_sessions was a sum of the revenues in the analysis_table, etc.
-### (Cleaning the data)
+### Cleaning the data
 I removed unnecessary data in the all_sessions and analysis_tables e.g. data with empty columns, or single values.
-### (Restructuring the data)
+### Restructuring the data
 I created 2 new tables. 
 A Products table that had the SKU and the name of each product, and the category taken from all_sessions. I made the SKU the product key for this table, and linked it to other tables as a foreign key.
 A VisitorLog table that paired the fullVisitorIds with each VisitorId. This was used as a composite foreign key for tables like all_session and analysis. 
-### (Answering the Questions)
+### Answering the Questions
 I attempted to answer the questions, stating my assumptions. 
 
 
