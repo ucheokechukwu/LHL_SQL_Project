@@ -13,7 +13,7 @@ The data varies from 1K to 1M (analytics).
 - Loading the csv file into each table. 
 - Challenge/learning experience: I realized that some of the columns had integer values that were too long to be stored as numbers. I had to store them as varchar/text.
 ### Analyzing the data
-I used Excel's Data Filters to analyze the data in each table. I tried to understand what the columns meant and the information they gave. I discovered patterns like the relationship between Visitorstarttime and visitId, between ratio (in sales_report and the units sold/inventory), the totalTransactionRevenue in all_sessions was a sum of the revenues in the analysis_table, etc.
+I used Excel's Data Filters to analyze the data in each table. I tried to understand what the columns meant and the information they gave. I discovered patterns like the relationship between Visitorstarttime and visitId, between ratio (in sales_report and the units sold/inventory), the totalTransactionRevenue in all_sessions was a sum of the revenues in the analysis_table, etc. I also realized that sales_report is a join between 2 tables - product and sales_by_sku making it redundant.
 ### Cleaning the data
 I removed unnecessary data in the all_sessions and analysis_tables e.g. data with empty columns, or single values.
 ### Restructuring the data
