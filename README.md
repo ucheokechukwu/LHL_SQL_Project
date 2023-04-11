@@ -28,15 +28,19 @@ I attempted to answer the questions, stating my assumptions.
 Please see the attached
 
 ## Challenges 
-Lack of information about what the data meant. There were columns that seemed to be indicate the same information (productRevenue, itemRevenue) but gave different values. I had to assume what each column represented, and this might affect the results.
-Missing data and the significance of missing data e.g. the revenue column in analysis was empty for several rows, and it was not clear whether this meant that the data was missing by mistake, or if this meant that revenue = 0. 
-Tables providing overlapping information - it's not clear what the difference between analysis and all_Sessions means as they both give data about the visitor log and the products viewed and purchased. As the tables provided similar information but this information also contradicted each other, I had to assume which provided more accurate information and I may be wrong.
-Repeated data e.g. the productCategory classed the products in several ways with items appearing under 'apparel' and then a similar or related item appearing under 'Brand'. 
+* Lack of information about what the data meant. There were columns that seemed to be indicate the same information (productRevenue, itemRevenue) but gave different values. I had to assume what each column represented, and this might affect the results.
+
+* Missing data and the significance of missing data e.g. the revenue column in analysis was empty for several rows, and it was not clear whether this meant that the data was missing by mistake, or if this meant that revenue = 0. 
+
+* Tables providing overlapping information - it's not clear what the difference between analysis and all_Sessions means as they both give data about the visitor log and the products viewed and purchased. As the tables provided similar information but this information also contradicted each other, I had to assume which provided more accurate information and I may be wrong.
+
+* Repeated data e.g. the productCategory classed the products in several ways with items appearing under 'apparel' and then a similar or related item appearing under 'Brand'. 
 
 
 ## Future Goals
-I would investigate the patterns I noticed between totalTransactionrevenue in 'all_sessions' and revenue in Analysis. 
-I would create a separate transaction table with columns for visitorID, date, order placed, etc. There are order numbers in all_sessions but this was not provided for each data entry.
-I would split the all_sessions tables between a table for site_specific information and a table for inventory information
-I would populate the products table with more information about category, stock quantity and restocking time.
+- Develop the 'Category' section by splitting into 2 values - "Function" and "Brand".
+- Populate the products_inventory table with more information about category, stock quantity and restocking time.
+- Investigate the patterns I noticed between totalTransactionrevenue in 'all_sessions' and revenue in Analysis. 
+- Create a separate transaction table with columns for visitorID, date, order placed, etc. There are order numbers in all_sessions but this was not provided for each data entry. Either use this as a Key or develop a unique Key.
+- Split the all_sessions tables between a table for site_specific information and a table for inventory information.
 
