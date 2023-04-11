@@ -1,8 +1,8 @@
 What issues will you address by cleaning the data?
 
-Removing unnecesary columns with empty values or single-valued data.
-Removing instances without sufficient data.
-Restructuring the data to have identity keys 
+* Removing unnecesary columns with empty values or single-valued data.
+* Removing instances without sufficient data.
+* Restructuring the data to have identity keys 
 - creating a products table with indexing, that links to the other tables.
 - Creating a visitorlog table with compound indexing.
 

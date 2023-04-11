@@ -58,4 +58,19 @@ FROM analytics
 -- Average units sold per country must be equivalent to average units sold across row
 
 
+-- QA for new products table
+-- Adding up the unique values of all the SKUs in the different tables
+WITH skucount AS
 
+    (SELECT DISTINCT("productSKU") FROM all_sessions
+    UNION
+    SELECT DISTINCT("productSKU") FROM sales_by_sku
+    UNION
+    SELECT DISTINCT("productSKU") FROM original_products)
+
+SELECT COUNT (DISTINCT ("productSKU")) FROM skucount
+
+
+--Result is 1246
+
+SELECT COUNT(*) FROM products; --1246
