@@ -12,7 +12,7 @@ Describe your QA process and include the SQL queries used to execute it.
 -- Derive the sum total of the revenues recorded
 
 
---QA for revenue questions
+```--QA for revenue questions
 -- will return TRUE as long as total revenue in each query is less than the total value above
 
 WITH q1_table AS 
@@ -74,3 +74,4 @@ SELECT COUNT (DISTINCT ("productSKU")) FROM skucount
 --Result is 1246
 
 SELECT COUNT(*) FROM products; --1246
+```

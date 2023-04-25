@@ -3,7 +3,7 @@
     
 -- **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
--- SQL Queries:
+```-- SQL Queries:
 
 SELECT country, city, SUM(revenue)
 FROM analytics
@@ -19,19 +19,21 @@ FROM analytics
     ON analytics."visitId" = visitorLocation."visitId"
 
 GROUP BY country
-ORDER BY sum(revenue) DESC;
+ORDER BY sum(revenue) DESC;```
 
 
 
 
+
+```
 Answer:
 -- The country is *USA 32.4K*
--- The city is *New York, USA. 11.3K*
+-- The city is *New York, USA. 11.3K*```
 
 
--- **Question 2: What is the average number of products ordered FROM visitors in each city and country?**
+**Question 2: What is the average number of products ordered FROM visitors in each city and country?**
 
--- SQL Queries:
+```-- SQL Queries:
 
 SELECT country, city, AVG(units_sold)::float
 FROM analytics
@@ -52,13 +54,12 @@ ORDER BY AVG(units_sold) DESC;
 -- Answer:
 -- City - *Chicago, United States has 5* the highest average
 -- Country - *Canada has 2.33*
+```
 
 
-
-
--- **Question 3: Is there any pattern in the types (product categories) 
+**Question 3: Is there any pattern in the types (product categories) 
 --of products ordered from visitors in each city and country?**
-
+```
 -- SQL Queries:
 SELECT country, city, MAX ("productCategory")
 FROM all_sessions
@@ -91,9 +92,9 @@ ORDER BY MAX ("productCategory");
 -- Accesories, Android Brand, and Apparels are the top 10 most popular results
 -- Filtering with brand categories, *Google* is the most popular brand
 
-
--- **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
-
+```
+**Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+```
 -- SQL Queries:
 
 with max_selling_products_by_country AS
@@ -122,10 +123,10 @@ ORDER BY country;
 
 -- Answer: Out of the top 10 results, 6 items were *stationary/office*. 
 -- Out of the top 20 results, 14 items were *stationary/office*. 
+```
 
-
--- **Question 5: Can we summarize the impact of revenue generated FROM each city/country?**
-
+**Question 5: Can we summarize the impact of revenue generated FROM each city/country?**
+```
 -- SQL Queries:
 --per city
 SELECT SUM(revenue)
@@ -174,5 +175,5 @@ ORDER BY sum(revenue) DESC;
 
 -- United States has the highest result at 96.26%
 -- it is possible that the scores are also due to the avalaible data. 
-
+```
 

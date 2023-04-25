@@ -10,7 +10,7 @@ Create a new PostgreSQL database called `ecommerce`. Set up tables for each .csv
 ##### My Notes
 - Some numeric columns were imported as varchar datatype because of their size. I got 'out of range' errors when I tried to import them as integer, and bigint datatypes respectively.
 - Before importing, I opened each csv in Excel and used the Data -> Filter functionality to overview the data in each column. I ran LEN(text) for certain columns. This gave me an idea of the appropriate data type and size for string/character types to import the columns.
-- imported table names with "" to preserve the formatting
+- imported table names with "[COLUMN NAMES]" to preserve the formatting
 
 
 ## Part 2: Data Cleaning
