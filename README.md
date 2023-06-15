@@ -1,4 +1,4 @@
-# Final-Project-Transforming-and-Analyzing-Data-with-SQL
+# Sales Analysis - Transforming and Analyzing Data with SQL!
 
 ## Project/Goals
 The goal of the project is to clean and analyze the database provided, and use this to practise skills learned this week. 
